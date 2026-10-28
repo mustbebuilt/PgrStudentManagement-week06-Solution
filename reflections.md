@@ -121,3 +121,4 @@ In .NET, source code dependencies are strictly constrained by MSBuild project re
    MSBuild disallows circular project references, preventing bad architectural drift and keeping the dependency hierarchy clear and unidirectional.
 3. **Complementary Automated Architecture Tests:**
    Unit tests like [`DomainDependencyTests.cs`](PgrStudentManagement.Tests/Architecture/DomainDependencyTests.cs) inspect assembly metadata at test execution time to guarantee that the compiled assemblies do not inadvertently pull in prohibited dependencies.
+
