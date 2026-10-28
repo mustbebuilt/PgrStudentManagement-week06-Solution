@@ -18,6 +18,12 @@ public class StudentsController : Controller
     }
 
     [HttpGet]
+    public IActionResult Index()
+    {
+        return RedirectToAction("Index", "Home");
+    }
+
+    [HttpGet]
     public async Task<IActionResult> Enrolments(
         string studentNumber,
         CancellationToken cancellationToken)
