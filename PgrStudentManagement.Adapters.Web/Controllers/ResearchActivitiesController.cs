@@ -44,7 +44,7 @@ public class ResearchActivitiesController : Controller
     {
         var model = new RecordResearchActivityViewModel
         {
-            StudentNumber = studentNumber ?? string.Empty,
+            StudentNumber = string.IsNullOrWhiteSpace(studentNumber) ? "S100001" : studentNumber,
             ActivityDate = DateTime.Today
         };
 

@@ -20,15 +20,16 @@ public class StudentsController : Controller
     [HttpGet]
     public IActionResult Index()
     {
-        return RedirectToAction("Index", "Home");
+        return RedirectToAction(nameof(Enrolments), new { studentNumber = "S100001" });
     }
 
     [HttpGet]
     public async Task<IActionResult> Enrolments(
-        string studentNumber,
+        string? studentNumber,
         CancellationToken cancellationToken)
     {
-        var input = new ViewStudentEnrolmentsInput(studentNumber ?? string.Empty);
+        studentNumber = string.IsNullOrWhiteSpace(studentNumber) ? "S100001" : studentNumber;
+        var input = new ViewStudentEnrolmentsInput(studentNumber);
         var output = await _useCase.ExecuteAsync(input, cancellationToken);
         var viewModel = _mapper.ToViewModel(output);
         return View(viewModel);
