@@ -2,12 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
+    <RollForward>Major</RollForward>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="6.0.0" />
@@ -23,6 +28,9 @@
   <ItemGroup>
     <ProjectReference Include="..\PgrStudentManagement.Business\PgrStudentManagement.Business.csproj" />
     <ProjectReference Include="..\PgrStudentManagement.Domain\PgrStudentManagement.Domain.csproj" />
+    <ProjectReference Include="..\PgrStudentManagement.Adapters.Persistence\PgrStudentManagement.Adapters.Persistence.csproj" />
+    <ProjectReference Include="..\PgrStudentManagement.Adapters.Web\PgrStudentManagement.Adapters.Web.csproj" />
+    <ProjectReference Include="..\PgrStudentManagement.Adapters.API\PgrStudentManagement.Adapters.API.csproj" />
   </ItemGroup>
 
 </Project>
