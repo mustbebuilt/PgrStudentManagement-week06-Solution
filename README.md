@@ -252,4 +252,4 @@ Clean Architecture provides modularity and separation of concerns **without** th
 ---
 
 ## Further Reading
-- For in-depth reflection answers to the 8 core lab questions and extension reflections, see [reflections.md](file:///Users/martincooper/Documents/learning%20materials/sad-2026/PgrStudentManagement-week06-Solution/reflections.md).
+- For in-depth reflection answers to the 8 core lab questions and extension reflections, see [reflections.md](reflections.md).
